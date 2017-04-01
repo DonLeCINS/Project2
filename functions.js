@@ -5,7 +5,7 @@ function answer()
   if (answerEntered == 8)
   {
   document.getElementById("numberError").innerHTML="Correct answer";
-  var score = 0.0;
+  var score;
   score=Number(score);
   newScore = score + 1;
   setCookie("daScore", newScore , 1);
@@ -27,7 +27,7 @@ function answer2()
   {
     document.getElementById("newError").innerHTML="Correct answer";
     document.getElementById("numberError").innerHTML="Correct answer";
-    var score = 0.0;
+    var score;
     score=Number(score);
     newScore = score + 1;
     setCookie("daScore", newScore , 1);
