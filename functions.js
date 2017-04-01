@@ -1,4 +1,3 @@
-
 function answer()
 {
   var answerEntered = document.getElementById("myNumber").value;
@@ -6,6 +5,7 @@ function answer()
   {
   document.getElementById("numberError").innerHTML="Correct answer";
   var score;
+  var newScore;
   score=Number(score);
   newScore = score + 1;
   setCookie("daScore", newScore , 1);
@@ -28,6 +28,7 @@ function answer2()
     document.getElementById("newError").innerHTML="Correct answer";
     document.getElementById("numberError").innerHTML="Correct answer";
     var score;
+    var newScore;
     score=Number(score);
     newScore = score + 1;
     setCookie("daScore", newScore , 1);
@@ -47,6 +48,8 @@ function answer3()
   if (answerEntered == 50)
 {
   document.getElementById("numberError").innerHTML="Correct answer";
+  var score;
+  var newScore;
   score=Number(score);
   newScore = score + 1;
   setCookie("daScore", newScore , 1);
