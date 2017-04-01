@@ -4,9 +4,9 @@ function answer()
   if (answerEntered == 8)
   {
   document.getElementById("numberError").innerHTML="Correct answer";
-  var score;
+  var score = 0.0;
   var newScore;
-  score=Number(score);
+  newScore=Number(newScore);
   newScore = score + 1;
   setCookie("daScore", newScore , 1);
   }
@@ -27,9 +27,9 @@ function answer2()
   {
     document.getElementById("newError").innerHTML="Correct answer";
     document.getElementById("numberError").innerHTML="Correct answer";
-    var score;
+    var score = 0.0;
     var newScore;
-    score=Number(score);
+    newScore=Number(newScore);
     newScore = score + 1;
     setCookie("daScore", newScore , 1);
   }
@@ -48,9 +48,9 @@ function answer3()
   if (answerEntered == 50)
 {
   document.getElementById("numberError").innerHTML="Correct answer";
-  var score;
+  var score = 0.0
   var newScore;
-  score=Number(score);
+  newScore=Number(newScore);
   newScore = score + 1;
   setCookie("daScore", newScore , 1);
 }
@@ -66,7 +66,7 @@ else
 function yourScore()
 {
   var yourScore;
-  var endScore = getCookie("daScore");
+  var endScore = getCookie("newScore");
   endScore = Number(endScore);
   yourScore = endScore / 3 * 100;
   document.getElementById("tot").innerHTML = (yourScore);
