@@ -66,7 +66,7 @@ else
 function yourScore()
 {
   var yourScore;
-  var endScore = getCookie("newScore");
+  var endScore = getCookie("daScore");
   endScore = Number(endScore);
   yourScore = endScore / 3 * 100;
   document.getElementById("tot").innerHTML = (yourScore);
