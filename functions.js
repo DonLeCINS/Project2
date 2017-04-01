@@ -1,18 +1,20 @@
+var score = 0;
+var idk = 0;
+var newScore;
 function answer()
 {
   var answerEntered = document.getElementById("myNumber").value;
   if (answerEntered == 8)
   {
   document.getElementById("numberError").innerHTML="Correct answer";
-  var score = 0.0;
-  var newScore;
-  newScore=Number(newScore);
   newScore = score + 1;
-  setCookie("daScore", newScore , 1);
+  newScore=Number(newScore);
+  idk = newScore;
+  setCookie("daScore", idk , 1);
   }
   else if (isNaN(answerEntered))
   {
-  alert("Enter price as number");
+  document.getElementById("numberError").innerHTML="Please enter in a number";
   }
   else
   {
@@ -21,26 +23,24 @@ function answer()
 }
 function answer2()
 {
-
   var answerEntered = document.getElementById("myNumber").value
   if (answerEntered == 40)
   {
     document.getElementById("newError").innerHTML="Correct answer";
-    document.getElementById("numberError").innerHTML="Correct answer";
-    var score = 0.0;
-    var newScore;
+    newScore =  score + 1;
     newScore=Number(newScore);
-    newScore = score + 1;
-    setCookie("daScore", newScore , 1);
+    idk = newScore;
+    setCookie("daScore", idk , 1);
   }
   else if (isNaN(answerEntered))
   {
-    alert("Enter price as number");
+    document.getElementById("newError").innerHTML="Please enter in a number";
+
   }
   else
   {
     document.getElementById("newError").innerHTML="Incorrect answer";
-  }
+}
 }
 function answer3()
 {
@@ -48,15 +48,15 @@ function answer3()
   if (answerEntered == 50)
 {
   document.getElementById("numberError").innerHTML="Correct answer";
-  var score = 0.0
-  var newScore;
-  newScore=Number(newScore);
   newScore = score + 1;
+  newScore=Number(newScore);
+  idk = newScore;
   setCookie("daScore", newScore , 1);
 }
   else if (isNaN(answerEntered))
 {
-  alert("Enter price as number");
+  document.getElementById("numberError").innerHTML="Please enter in a number";
+
 }
 else
 {
@@ -65,11 +65,14 @@ else
 }
 function yourScore()
 {
+  var lastScore;
   var yourScore;
   var endScore = getCookie("daScore");
   endScore = Number(endScore);
-  yourScore = endScore / 3 * 100;
-  document.getElementById("tot").innerHTML = (yourScore);
+  yourScore = endScore / 3;
+  yourScore = Number(yourScore);
+  lastScore = yourScore * 100;
+  document.getElementById("tot").innerHTML = (lastScore);
 }
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
